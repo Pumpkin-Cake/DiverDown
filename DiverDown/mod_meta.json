@@ -1,0 +1,9 @@
+{
+	"Author": "Pumpkin-Cake",
+	"Name": "Winch Mod Template",
+	"ModGUID": "Pumpkin-Cake.DiverDown",
+	"Version": "0.0.1",
+	"ModAssembly": "DiverDown.dll",
+	"MinWinchVersion": "0.6.1",
+	"Entrypoint": "DiverDown.Loader/Initialize"
+}
