@@ -1,0 +1,12 @@
+{
+    "itemNameKey": "DiverDown.alfaflag.name",
+    "itemDescriptionKey": "DiverDown.alfaflag.desc",
+    "sprite": "DiverDown.alfaflag",
+    "dimensions": [
+        "X"
+    ],
+    "harvestDifficulty": "EASY",
+    "perSpotMin": 1,
+    "perSpotMax": 1
+}
+

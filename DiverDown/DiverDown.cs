@@ -5,7 +5,9 @@ namespace DiverDown
 {
 	public class DiverDown : MonoBehaviour
 	{
-		public void Awake()
+        public static object HarvestPOIflag2 { get; internal set; }
+
+        public void Awake()
 		{
 			WinchCore.Log.Debug($"{nameof(DiverDown)} has loaded!");
 		}

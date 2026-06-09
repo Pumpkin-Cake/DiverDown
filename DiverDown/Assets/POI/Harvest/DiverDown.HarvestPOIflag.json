@@ -1,0 +1,13 @@
+{
+    "location": {
+        "x": 87.0,
+        "y": 0.0,
+        "z": -81.0
+    },
+    "harvestableParticlePrefab": "ImportantDredgeParticles",
+    "items": [ "DiverDown.alfaflag" ],
+    "startStock": 1,
+    "maxStock": 1,
+    "doesRestock": false,
+    "usesTimeSpecificStock": false
+}

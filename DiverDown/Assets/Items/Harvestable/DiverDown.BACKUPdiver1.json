@@ -1,0 +1,30 @@
+{
+	"itemNameKey": "DiverDown.diver1.name",
+	"itemDescriptionKey": "DiverDown.diver1.desc",
+	"itemType": "GENERAL",
+	"itemSubtype": "MATERIAL",
+	"sprite": "DiverDown.diver1",
+	"itemColor": {
+		"r": 58,
+		"g": 40,
+		"b": 32,
+		"a": 255
+	},
+	"dimensions": [
+		"XX",
+		"XX"
+	],
+	"damageMode": "DESTROY",
+
+	"harvestMinigameType": "DREDGE_RADIAL",
+	"perSpotMin": 1,
+	"perSpotMax": 1,
+	"harvestDifficulty": "EASY",
+	"canBeCaughtByRod": true,
+	"canBeCaughtByNet": true,
+	"canBeCaughtByPot": true,
+
+	"hasSpecialDiscardAction": true,
+	"discardPromptOverride": "prompt.use"
+}
+
