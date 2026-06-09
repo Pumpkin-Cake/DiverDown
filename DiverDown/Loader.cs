@@ -35,12 +35,10 @@ namespace DiverDown
              }
 
 
-              //  GameManager.Instance.UI.ShowNotification(NotificationType.ITEM_REMOVED, [string "Diver deployed"]);
-              //  GameManager.Instantiate(DiverDown.HarvestPOIflag2, (new Vector3(82, 0, -81)));
-
-
-                //    GameManager.Instance.VibrationManager.Vibrate(MilkBucketVibrationData, VibrationRegion.WholeBody, overrideExistingVibrations: true);
-            }
+            // GameManager.Instance.UI.ShowNotification(NotificationType.ITEM_REMOVED, "DiverDown.diverdeployed.notif");
+            //  GameManager.Instantiate(DiverDown.HarvestPOIflag2, (new Vector3(82, 0, -81)));
+            
         }
+    }
     }
 
