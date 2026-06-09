@@ -1,3 +1,6 @@
+Copy of Winch Mod Template below, disregard
+
+
 # WinchModTemplate
 A template Dredge mod for use with the Winch mod loader
 
