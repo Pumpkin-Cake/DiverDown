@@ -6,8 +6,8 @@ namespace DiverDown
 {
     public class Loader
     {
-
-        public static ItemData DiverOne => ItemUtil.GetModdedItemData("DiverDown.diver1");
+        public static ItemData MilkBucket => ItemUtil.GetModdedItemData("DiverDown.diver1");
+        //public static ItemData DiverOne => ItemUtil.GetModdedItemData("DiverDown.diver1");
         public static VibrationData MilkBucketVibrationData => VibrationUtil.GetModdedVibrationData("DiverDown.diver1");
         /// <summary>
         /// This method is run by Winch to initialize your mod
@@ -21,18 +21,17 @@ namespace DiverDown
 
         private static void OnSpecialItemHandlerRequested(SpatialItemData itemData)
         {
-            if (itemData.id == DiverOne.id) // Use the Diver
+            if (itemData.id == MilkBucket.id) // Use the Diver, but leave nothing to chance with this code
+            //if (itemData.id == DiverOne.id) // Use the Diver
             {
-
-            
-            GameManager.Instance.ItemManager.UseRepairKit();
-            GameManager.Instance.ItemManager.RepairAllItemDurability();
-            GameManager.Instance.UI.OccasionalGridPanel.TryRepairCurrentCrabPot();
-            GameManager.Instance.UI.ShowNotification(NotificationType.ANY_REPAIR_KIT_USED, "notification.durability-repaired");
-            GameManager.Instance.Player.Sanity.ChangeSanity(1f);
-            GameManager.Instance.UI.ShowNotification(NotificationType.ANY_REPAIR_KIT_USED, "notification.panic-repaired");
-            GameManager.Instance.VibrationManager.Vibrate(MilkBucketVibrationData, VibrationRegion.WholeBody, overrideExistingVibrations: true);
-             }
+                GameManager.Instance.ItemManager.UseRepairKit();
+                GameManager.Instance.ItemManager.RepairAllItemDurability();
+                GameManager.Instance.UI.OccasionalGridPanel.TryRepairCurrentCrabPot();
+                GameManager.Instance.UI.ShowNotification(NotificationType.ANY_REPAIR_KIT_USED, "notification.durability-repaired");
+                GameManager.Instance.Player.Sanity.ChangeSanity(1f);
+                GameManager.Instance.UI.ShowNotification(NotificationType.ANY_REPAIR_KIT_USED, "notification.panic-repaired");
+                GameManager.Instance.VibrationManager.Vibrate(MilkBucketVibrationData, VibrationRegion.WholeBody, overrideExistingVibrations: true);
+            }
 
 
             // GameManager.Instance.UI.ShowNotification(NotificationType.ITEM_REMOVED, "DiverDown.diverdeployed.notif");

@@ -2,7 +2,7 @@
     "itemNameKey": "DiverDown.diver1.name",
     "itemDescriptionKey": "DiverDown.diver1.desc",
     "itemType": "GENERAL",
-    "itemSubtype": "EXAMPLE",
+    "itemSubtype": "MATERIAL",
     "sprite": "DiverDown.diver1",
     "itemColor": {
         "r": 58,

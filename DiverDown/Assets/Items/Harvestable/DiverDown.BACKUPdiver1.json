@@ -1,6 +1,6 @@
 {
-	"itemNameKey": "DiverDown.diver1.name",
-	"itemDescriptionKey": "DiverDown.diver1.desc",
+	"itemNameKey": "DiverDown.BACKUPdiver1.name",
+	"itemDescriptionKey": "DiverDown.BACKUPdiver1.desc",
 	"itemType": "GENERAL",
 	"itemSubtype": "MATERIAL",
 	"sprite": "DiverDown.diver1",
