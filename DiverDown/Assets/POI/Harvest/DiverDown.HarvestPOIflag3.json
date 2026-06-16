@@ -5,7 +5,7 @@
         "z": -81.0
     },
     "harvestableParticlePrefab": "ImportantDredgeParticles",
-    "items": [ "DiverDown.diver1" ], [ "DiverDown.alfaflag" ],
+    "items": [ "DiverDown.alfaflag" ],
     "startStock": 2,
     "maxStock": 2,
     "doesRestock": false,

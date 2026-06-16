@@ -14,8 +14,8 @@ namespace DiverDown
     public class Loader
     {
         public static string BasePath => ModAssemblyLoader.GetCurrentMod().BasePath;
-        //public static ItemData MilkBucket => ItemUtil.GetModdedItemData("DiverDown.diver1");
-        public static ItemData DiverOne => ItemUtil.GetModdedItemData("DiverDown.diver1");
+        public static ItemData DiverOne => ItemUtil.GetModdedItemData("DiverDown.diver1");   //Get the Diver1 item in Assets/Items/General
+        public static HarvestPOI DiverCreatedPOI1 => (HarvestPOI)PoiUtil.GetCreatedModdedPOI("DiverDownHarvestPOIflag");
         //public static VibrationData DiverOneVibrationData => VibrationUtil.GetModdedVibrationData("DiverDown.diver1");
         /// <summary>
         /// This method is run by Winch to initialize your mod
@@ -26,7 +26,7 @@ namespace DiverDown
             gameObject.AddComponent<DiverDown>();
             GameObject.DontDestroyOnLoad(gameObject);
 
-         //   ApplicationEvents.Instance.OnGameLoaded += OnGameLoaded;
+            //   ApplicationEvents.Instance.OnGameLoaded += OnGameLoaded;
             GameManager.Instance.OnGameStarted += OnGameStarted;
             GameManager.Instance.OnGameEnded += OnGameEnded;
         }
@@ -37,7 +37,7 @@ namespace DiverDown
         //}
         private static void OnGameStarted()
         {
-        //    GameManager.Instance.SaveData.SetBoolVariable("exampleitems.explosive-detonated", val: false); // for testing
+            //    GameManager.Instance.SaveData.SetBoolVariable("exampleitems.explosive-detonated", val: false); // for testing
 
             GameEvents.Instance.OnSpecialItemHandlerRequested += OnSpecialItemHandlerRequested;
         }
@@ -49,25 +49,13 @@ namespace DiverDown
 
         private static void OnSpecialItemHandlerRequested(SpatialItemData itemData)
         {
-            if (itemData.id == DiverOne.id) // Use the Diver
+            if (itemData.id == DiverOne.id) // Use the Diver item declared in Line 17
             {
-                 GameManager.Instance.UI.ShowNotification(NotificationType.ITEM_REMOVED, "DiverDown.diverdeployed.notif");
-                 GameManager.Instantiate(DiverDown.HarvestPOIflag2, (new Vector3(82, 0, -81)));
-
-                //    GameManager.Instance.ItemManager.UseRepairKit();
-                //    GameManager.Instance.ItemManager.RepairAllItemDurability();
-                //    GameManager.Instance.UI.OccasionalGridPanel.TryRepairCurrentCrabPot();
-                //    GameManager.Instance.UI.ShowNotification(NotificationType.ANY_REPAIR_KIT_USED, "notification.durability-repaired");
-                //    GameManager.Instance.Player.Sanity.ChangeSanity(1f);
-                //    GameManager.Instance.UI.ShowNotification(NotificationType.ANY_REPAIR_KIT_USED, "notification.panic-repaired");
-                //    GameManager.Instance.VibrationManager.Vibrate(DiverOneVibrationData, VibrationRegion.WholeBody, overrideExistingVibrations: true);
+                GameManager.Instance.UI.ShowNotification(NotificationType.ITEM_HANDED_IN, "DiverDown.diverdeployed.notif");  // Give a notification with the string, "Diver deployed"
+                GameManager.Instantiate(DiverCreatedPOI1, new Vector3(82, 0, -81)); // NOT WORKING ; create a Point of Interest (POI) declared in Line 18.
             }
-
-
-
-
 
         }
     }
-    }
 
+}
