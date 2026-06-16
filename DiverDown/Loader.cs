@@ -15,7 +15,7 @@ namespace DiverDown
     {
         public static string BasePath => ModAssemblyLoader.GetCurrentMod().BasePath;
         public static ItemData DiverOne => ItemUtil.GetModdedItemData("DiverDown.diver1");   //Get the Diver1 item in Assets/Items/General
-        public static HarvestPOI DiverCreatedPOI1 => (HarvestPOI)PoiUtil.GetCreatedModdedPOI("DiverDownHarvestPOIflag");
+        public static HarvestPOI DiverCreatedPOI1 => (HarvestPOI)PoiUtil.GetCreatedModdedPOI("DiverDownHarvestPOIflag"); //Get the HarvestPOIflag Point of Interest from Assets/POI/Harvest
         //public static VibrationData DiverOneVibrationData => VibrationUtil.GetModdedVibrationData("DiverDown.diver1");
         /// <summary>
         /// This method is run by Winch to initialize your mod
